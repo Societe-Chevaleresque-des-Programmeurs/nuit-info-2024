@@ -1,0 +1,78 @@
+#progress-container {
+  margin: .5rem auto;
+  width: 80%;
+  height: 2rem;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  transition: width 0.1s linear;
+}
+
+.interactive-content {
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: .5rem;
+}
+
+.ocean-organs {
+  flex: 1;
+  overflow: hidden;
+
+  :first-child {
+    margin-top: 0;
+  }
+}
+
+.body-container {
+  flex: 2;
+  height: auto;
+  overflow: hidden;
+
+  img {
+    max-height: calc(100vh - 1.5rem);
+  }
+}
+
+.fish {
+  height: 2rem;
+  position: relative;
+  animation: mymove 1s ease-out forwards;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #c2d2e2;
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+
+  to {
+    top: 2rem;
+    opacity: 0;
+  }
+}
